@@ -1,0 +1,29 @@
+{
+    "name": "ct-nodejs-catalog-api",
+    "version": "1.0.0",
+    "private": true,
+    "type": "commonjs",
+    "scripts": {
+        "build": "tsc -p tsconfig.json",
+        "start": "node dist/app.js",
+        "dev": "tsx src/app.ts",
+        "test": "jest --runInBand"
+    },
+    "dependencies": {
+        "@commercetools/platform-sdk": "^8.7.0",
+        "@commercetools/sdk-client-v2": "^3.0.0",
+        "dotenv": "^16.4.5",
+        "express": "^4.21.2",
+        "express-validator": "^7.0.0",
+        "winston": "^3.3.2"
+    },
+    "devDependencies": {
+        "@types/express": "^5.0.1",
+        "@types/jest": "^29.5.14",
+        "@types/node": "^22.10.1",
+        "jest": "^29.7.0",
+        "ts-jest": "^29.3.1",
+        "tsx": "^4.19.0",
+        "typescript": "^5.7.3"
+    }
+}
