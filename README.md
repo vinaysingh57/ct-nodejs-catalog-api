@@ -19,6 +19,30 @@ A production-ready REST API scaffold for commercetools product management built 
 
 ## Deploy to AWS Lambda
 
+### Option 1: Deploy from GitHub using GitHub Actions (recommended)
+
+This repository now includes a GitHub Actions workflow at `.github/workflows/deploy-lambda.yml`.
+When you push to `main`, GitHub Actions will:
+
+1. checkout your repository
+2. install dependencies
+3. build the TypeScript output
+4. create a deployment package
+5. upload the package to your AWS Lambda function
+
+To use it, add these repository secrets in GitHub:
+
+- `AWS_ACCESS_KEY_ID`
+- `AWS_SECRET_ACCESS_KEY`
+- `AWS_REGION`
+- `AWS_LAMBDA_FUNCTION_NAME`
+
+Then push your code to `main`. GitHub will deploy automatically.
+
+### Option 2: Manual zip upload
+
+If you prefer manual deployment instead, follow these steps:
+
 1. Install dependencies locally:
    - `npm install`
 2. Build the TypeScript output:
