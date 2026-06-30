@@ -1,4 +1,6 @@
-import serverless from 'serverless-http';
-import app from './app';
+import serverless from "serverless-http";
+import app from "./app";
 
-export const handler = serverless(app);
+export const handler = serverless(app, {
+    basePath: "/default/ct-catalog-api"
+});
