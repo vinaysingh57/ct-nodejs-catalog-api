@@ -5,7 +5,7 @@
     "type": "commonjs",
     "scripts": {
         "build": "tsc -p tsconfig.json",
-        "build:lambda": "npm run build",
+        "build:lambda": "npm run build && node -e \"const fs = require('fs'); fs.copyFileSync('dist/src/lambda.js', 'dist/lambda.js');\"",
         "start": "node dist/app.js",
         "dev": "tsx src/app.ts",
         "test": "jest --runInBand"
